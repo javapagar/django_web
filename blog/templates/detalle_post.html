@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block page_content %}
-<div class="col-md-8 offset-md-2">
     <h1>{{ post.title }}</h1>
     <small>
         {{ post.created_on }} |&nbsp;
@@ -32,5 +31,4 @@
     <p>{{ comment.body }}</p>
     <hr>
     {% endfor %}
-</div>
 {% endblock %}

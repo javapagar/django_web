@@ -5,6 +5,7 @@ from django.shortcuts import render
 def project_index(request):
     projects = Project.objects.all()
     context = {
+        'nbar':'project',
         'projects':projects
     }
 
@@ -13,6 +14,7 @@ def project_index(request):
 def project_description(request,pk):
     project=Project.objects.get(pk=pk)
     context = {
+        'nbar':'project',
         'project':project
     }
 

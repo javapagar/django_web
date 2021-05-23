@@ -6,6 +6,7 @@ from django.shortcuts import render
 def posts_list(request):
     posts = Post.objects.all().order_by('-created_on')
     context ={
+        "nbar":"blog",
         "posts":posts
     }
    
