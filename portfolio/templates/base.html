@@ -5,8 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/font-awesome/css/font-awesome.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+  
+  {% block stylesheet %}{% endblock %}
   <title>
     {% block title %}
     {% endblock %}
@@ -59,19 +63,35 @@
     {% block page_content %}{% endblock %}
   </div>
 
-  <footer>
-    <div class= "navbar navbar-inverse navbar-static-bottom" role="navigation">
-        <div class="navbar-text pull-left">
-        </div>
-        <div class= "navbar-text pull-right">
-    <!-- Add in your social media / github links here -->
-            <a href="https://github.com/javapagar">
-                <i class="fa fa-github-square fa-2x"></i></a>
-        </div>
-        <!--Below is the copyright information for the site. You can fill in your own here.-->
-        <div class="navbar-text pull-left">
-        &copy; Javier Aparicio
-        </div>
+  <footer class="bg-secondary text-light">
+    <div class="container rs-container center">
+      <div class="rs-item">
+        <a href="https://es.linkedin.com/in/apariciogarciajavier" target="_blank">
+          <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+        </a>
+      </div>
+      
+      <div class="rs-item">
+        <a href="https://github.com/javapagar" target="_blank">
+          <i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="rs-item">
+        
+        <a href="mailto: apariciogarcia.j@gmail.com">
+          <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+        </a>
+        <span>apariciogarcia.j@gmail.com</span>
+      </div>
+
+
+      
+    </div>
+    
+    <div class="container text-center">
+      <hr class ="bg-warning">
+      <span class="copyright">&copy;2021 Javier Aparicio</span>
     </div>	
   </footer>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

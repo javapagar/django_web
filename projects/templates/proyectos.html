@@ -3,22 +3,47 @@
 {% block title %}Proyectos{% endblock %}
 {% block page_content %}
 {% load static %}
-<h1> Proyectos</h1>
+{% block stylesheet %}
+    <link rel="stylesheet" href="{% static 'css/project.css' %}">
+{% endblock%}
+<h1 class="title">Portfolio</h1>
+<hr class="bg-warning">
 <div class="row">
 {% for project in projects %}
     <div class="col-md-4">
         <div class="card mb-2">
             <img class="card-img-top" src ="{% static project.image %}">
             <div class="card-body">
-                <h5 class="card-title">{{ project.title }}</h5>
-                <p class="card-text">{{ project.description }}</p>
-                <a href="{% url 'detalle_proyecto' project.pk %}"
-                    class="btn btn-primary">
-                    M&aacute;s
-                </a>    
+                <h5 class="card-title text-center">{{ project.title }}</h5>
+                <p class="card-text">{{ project.abstract }}</p>
+                <div class="text-center">
+                  <a href="{% url 'detalle_proyecto' project.pk %}"
+                  class="btn btn-warning">
+                  M&aacute;s
+                  </a>
+                </div>
+                    
             </div>
         </div>
     </div>
+    <!--<div class="card text-secondary" style="background-image: url({% static project.image %})">
+        <div class="text-center rgba-stylish-strong py-5 px-4">
+          <div class="py-5">
+    
+            <h5 class="h5 text-secondary"><i class="fa fa-camera-retro"></i> Photography</h5>
+            <h2 class="card-title h2 my-4 py-2">{{ project.title }}</h2>
+            <p class="mb-4 pb-2 px-md-5 mx-md-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur
+              obcaecati vero aliquid libero doloribus ad, unde tempora maiores, ullam, modi qui quidem minima debitis
+              perferendis vitae cumque et quo impedit.</p>
+            <a class="btn btn-primary" href="{% url 'detalle_proyecto' project.pk %}"><i class="fa fa-clone left"></i> View project</a>
+    
+          </div>
+        </div>
+    </div>
+      <br>-->
 {% endfor %}
 </div>
+
+
+
 {% endblock %}

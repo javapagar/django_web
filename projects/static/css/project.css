@@ -1,0 +1,25 @@
+
+.project{
+    display: flex;
+    flex-direction: column;
+}
+
+.project-item{
+    align-items: center;
+}
+img{
+    max-width: 300px;
+    display:block;
+    margin:auto;
+}
+.title{
+    text-align: center;
+    padding: 10px;
+}
+.color-black{
+    background-color: black;
+    padding:10px;
+}
+.fa-color{
+    background-color: black;
+}

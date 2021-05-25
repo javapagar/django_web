@@ -1,3 +1,32 @@
-h1 {
-    color:red;
+body{ height:100vh; margin:0; }
+
+header{ min-height:50px;}
+
+
+/* Trick */
+body{ 
+  display:flex; 
+  flex-direction:column;
+  
+}
+
+footer{
+  margin-top:auto;
+  
+}
+.rs-container{
+    display:flex; 
+    flex-direction:row;
+    justify-content: space-between; 
+}
+.rs-item{
+    padding-top: 10px;
+
+}
+i.fa{
+    color:white;
+}
+
+.copyright{
+  font-size: 12px;
 }
