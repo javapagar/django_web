@@ -1,0 +1,25 @@
+.flex-container{
+    display: flex;
+    direction: row;
+}
+.flex-center{
+    align-self: center;
+ 
+}
+.center{
+    text-align: center;
+}
+img{
+    height: 500px;
+}
+.hola{
+    background-color: white;
+    background-size: cover;
+    min-height:800px;
+}
+.verticalLine {
+    border-left: thick solid #ff0000;
+  }
+.arrow{
+    background-color:orangered;
+}

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}About me{% endblock %}
+
+{% load static %}
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+{% endblock %}
+
+{% block page_content %}
+
+<Section class="about-me">
+    <div class="title">
+        <h1>Sobre m&iacute;</h1>
+        <hr class="bg-warning">
+    </div>
+    <div class="flex-container hola">
+        <div >
+            <br>
+            <p class="h4 center" data-aos="fade-right" data-aos-delay="1000">Hello world! Me llamo Javier Aparicio</p>
+            <p class="h4 center" data-aos="fade-right" data-aos-delay="1500">Software Engineer & Data Science</p>
+            <br>
+            <p class="h5 flex-center" data-aos="fade-up" data-aos-delay="2000">
+                Un apasionado de las tecnologías. 
+                Me encantan la programación y los datos, con los que he trabajado los últimos 10 años. 
+                Valoro mucho la formación, y siempre estoy motivado para obtener nuevos conocimientos y utilizar nuevas herramientas. 
+                Mi curiosidad y mi facilidad para aprender me han dado unas capacidades todo terreno, capaz de adaptarme a cualquier equipo.
+                Si quieres saber más sobre mí sigue leyendo...
+            </p>
+            <br>
+            <div class="center" data-aos="fade-up" data-aos-delay="2500">
+                <p>Scroll down</p>
+                <i id="arrow" class="fa fa-arrow-down arrow fa-3x " data-fa-transform="shrink-8 up-10" aria-hidden="true"></i>
+            </div>
+            
+           </div> 
+        <div>
+            <img src="{% static 'img/me2BN.jpg' %}" alt="Me" data-aos="fade-left" data-aos-delay="300"/>
+        </div>
+
+    </div>
+</Section>
+<section>
+    <div class="title" data-aos="fade-zoom" data-aos-delay="300">
+        <h1>Formación</h1>
+        <hr class="bg-warning">
+    </div>
+    <div class="flex-container">
+        <div class="flex-center">
+            
+        </div> 
+        <div class="flex-center verticalLine center">
+            hola
+        </div> 
+    </div>
+</section>
+{% endblock %}
+{% block script %}
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="{% static 'js/aos.js' %}"></script>
+<script src="{% static 'js/move.js' %}"></script>
+{% endblock %}

@@ -15,7 +15,7 @@
             <img class="card-img-top" src ="{% static project.image %}">
             <div class="card-body">
                 <h5 class="card-title text-center">{{ project.title }}</h5>
-                <p class="card-text">{{ project.abstract }}</p>
+                <p class="card-text">{{ project.abstract | slice:":100"}}...</p>
                 <div class="text-center">
                   <a href="{% url 'detalle_proyecto' project.pk %}"
                   class="btn btn-warning">
